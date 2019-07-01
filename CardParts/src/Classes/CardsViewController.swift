@@ -153,7 +153,8 @@ open class CardsViewController : UIViewController, UICollectionViewDataSource, U
 	}
 
     public func reload(cards: [CardController]) {
-
+        print(":: Reloading CARDS :: \(view.bounds.width)")
+        cardCellWidth.accept(view.bounds.width - (CardParts.theme.cardCellMargins.left + CardParts.theme.cardCellMargins.right))
         self.loadCards(cards: cards)
     }
 	
